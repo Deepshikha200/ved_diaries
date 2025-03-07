@@ -1,0 +1,37 @@
+@use "../../../../assets/theme/var" as *;
+
+.banner {
+  background-image: url("../../../../assets/images/bannerimg.jpeg");
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
+  position: relative;
+  display: flex;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 10rem;
+
+  &::after {
+    background-color: rgba(0, 0, 0, .2);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  &__title {
+    font-size: 6rem;
+    font-weight: 500;
+    color: $white;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 80rem;
+    line-height: 1.2;
+
+    @media (max-width:991px) {
+      font-size: 4rem;
+    }
+  }
+}

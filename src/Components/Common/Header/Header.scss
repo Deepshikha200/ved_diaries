@@ -1,0 +1,159 @@
+@use "../../../assets/theme/var" as *;
+
+.header {
+  padding: 2.4rem 0 1.51rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  @media (max-width:991px) {
+    padding: 0;
+
+    .navbar-brand {
+      padding: 1rem 0;
+    }
+  }
+
+  .navbar-brand {
+    img {
+      width: 6rem;
+    }
+  }
+
+  nav {
+    .nav-link {
+      color: $white;
+      margin-right: 3.6rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      @media (max-width:991px) {
+        padding: 2rem;
+      }
+
+      // &:hover {}
+
+      // &.active {
+      //   color: $greyC0;
+      // }
+    }
+
+    .header_btn {
+      background-color: $green;
+      border: none;
+      outline: none;
+      border-radius: 0.5rem;
+      color: $white;
+      padding: 0.6rem 1.2rem;
+      transition: all 0.3s ease-in-out;
+      border: 1px solid transparent;
+
+
+      &:hover {
+        background-color: transparent;
+        border-color: $green;
+        transition: all 0.3s ease-in-out;
+        color: $green;
+      }
+    }
+  }
+
+  .navbar-collapse {
+    @media (max-width: 991px) {
+      position: absolute;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(32px);
+      width: 38rem;
+      left: -100%;
+      padding-left: 1rem;
+      transition: transform 0.2s ease-in-out;
+      transform: translateX(-100%);
+      height: 100vh;
+
+
+      &.show {
+        transform: translateX(0);
+        left: 0;
+
+        ~.navbar-toggler .navbar-toggler-icon {
+          background-color: transparent;
+          transition: all 0.2s ease-in-out;
+
+          &::before {
+            transform: rotate(45deg) translate(5px, 5px);
+            transition: all 0.2s ease-in-out;
+          }
+
+          &::after {
+            transform: rotate(-45deg) translate(9px, -10px);
+            transition: all 0.2s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-toggler {
+    padding: 0;
+    margin-left: 10px;
+    border: 0;
+    box-shadow: none !important;
+    position: relative;
+    z-index: 999;
+
+    &-icon {
+      background-image: none;
+      width: 26px;
+      height: 2px;
+      background-color: #fff;
+      position: relative;
+      transition: all ease-in-out 0.1s;
+
+      &::after,
+      &::before {
+        content: "";
+        background-color: #fff;
+        width: 26px;
+        height: 2px;
+        position: absolute;
+        transition: all ease-in-out 0.1s;
+      }
+
+      &::after {
+        top: 10px;
+        right: 0;
+      }
+
+      &::before {
+        top: -10px;
+        right: 0;
+      }
+    }
+  }
+
+  &.scroll_header {
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    backdrop-filter: blur(10px);
+  }
+
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    transition: all ease-in-out 0.3s;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .overlay.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

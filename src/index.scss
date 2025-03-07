@@ -1,0 +1,140 @@
+@use "./assets/theme/var" as *;
+
+body {
+  margin: 0;
+  font-family: $globalFont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+  min-height: 100vh;
+
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+
+span,
+a {
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+div {
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 400;
+
+  @media (max-width:991px) {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+}
+
+.container {
+  max-width: 132rem;
+  padding-inline: 1.5rem;
+
+  @media (max-width:1199px) {
+    max-width: 100%;
+    padding-inline: 1rem;
+  }
+}
+
+.text-error {
+  color: rgb(173, 40, 40);
+  font-size: 1.4rem;
+  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.text-yellow {
+  color: #FFD013 !important;
+}
+
+.text-green {
+  color: #34F45F !important;
+}
+
+.text-red {
+  color: #FF6B6B !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.otp_input_box {
+  div {
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  input {
+    height: 8rem;
+    width: 7.2rem !important;
+    border-radius: 2rem;
+    border: 1px solid $greyC0;
+    margin-bottom: 1rem;
+
+    &:focus {
+      border-color: $green ;
+      outline: $green;
+    }
+
+    @media (max-width:991px) {
+      height: 6rem;
+      width: 5rem !important;
+      border-radius: 1rem;
+      margin: 0;
+
+    }
+  }
+}
