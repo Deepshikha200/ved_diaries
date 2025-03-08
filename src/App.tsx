@@ -1,11 +1,11 @@
-import Home from "./Components/Pages/Home/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.scss";
+import Routes from "./Routes/Routes";
 
 function App() {
   return (
     <>
-      <Home />
+      <Routes />
     </>
   );
 }

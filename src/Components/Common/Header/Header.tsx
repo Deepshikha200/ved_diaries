@@ -4,12 +4,13 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from "../../../assets/images/logo.png";
 import "./Header.scss";
 import { useEffect, useState } from "react";
-// import { NavLink } from "react-router-dom";
+import { NavDropdown } from "react-bootstrap";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,8 +46,23 @@ const Header = () => {
             </Navbar.Brand>
             <Nav className="ms-auto">
               <Nav.Link className="nav-link">Home</Nav.Link>
-              <Nav.Link className="nav-link">About</Nav.Link>
-              <Nav.Link className="nav-link">Portfolio</Nav.Link>
+              <NavDropdown
+                title="Portfolio"
+                id="basic-nav-dropdown"
+                show={isDropdownOpen}
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
+                <NavDropdown.Item href="#action/3.1">Wedding</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                Pre Wedding
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Events and Parties
+                </NavDropdown.Item>
+              </NavDropdown>
+
+              <Nav.Link className="nav-link">Contact Us</Nav.Link>
             </Nav>
           </Navbar.Collapse>
 

@@ -80,7 +80,7 @@ h2 {
 
   @media (max-width:1199px) {
     max-width: 100%;
-    padding-inline: 1rem;
+    padding-inline: 2rem;
   }
 }
 
@@ -121,13 +121,13 @@ h2 {
     height: 8rem;
     width: 7.2rem !important;
     border-radius: 2rem;
-    border: 1px solid $greyC0;
+    // border: 1px solid $greyC0;
     margin-bottom: 1rem;
 
-    &:focus {
-      border-color: $green ;
-      outline: $green;
-    }
+    // &:focus {
+    //   // border-color: $green ;
+    //   // outline: $green;
+    // }
 
     @media (max-width:991px) {
       height: 6rem;
@@ -136,5 +136,17 @@ h2 {
       margin: 0;
 
     }
+  }
+}
+
+.py-60 {
+  padding: 6em 0;
+
+  @media (max-width:1199px) {
+    padding: 4rem 0;
+  }
+
+  @media (max-width:767px) {
+    padding: 3rem 0;
   }
 }

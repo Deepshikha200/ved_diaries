@@ -1,0 +1,45 @@
+@use "../../../../assets/theme/var" as *;
+
+.categories {
+  background-color: $grey;
+
+  &_col {
+    padding-inline: 1.9rem;
+    cursor: pointer;
+    text-align: center;
+
+    .img_con {
+      position: relative;
+      transition: all ease-in-out 0.5s;
+
+      &:hover {
+        &::after {
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          background-color: rgba(255, 255, 255, 0.3);
+          transition: all ease-in-out 0.5s;
+        }
+      }
+    }
+
+    h4 {
+      margin-top: 3rem;
+      font-size: 3.2rem;
+      font-weight: 400;
+      color: #010101;
+
+      @media (max-width: 767px) {
+        font-size: 2.8rem;
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: 991px) {
+      padding: 0;
+    }
+  }
+}

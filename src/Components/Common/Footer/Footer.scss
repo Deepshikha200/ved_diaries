@@ -1,0 +1,14 @@
+@use "../../../assets/theme/var" as *;
+
+.footer {
+  &_links {
+
+    li {
+      a {
+        color: $black11;
+        font-size: 2rem;
+      }
+    }
+
+  }
+}

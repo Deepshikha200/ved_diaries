@@ -3,7 +3,7 @@
 .banner {
   background-image: url("../../../../assets/images/bannerimg.jpeg");
   background-size: cover;
-  min-height: 100vh;
+  min-height: 80vh;
   background-position: center;
   position: relative;
   display: flex;
@@ -32,6 +32,55 @@
 
     @media (max-width:991px) {
       font-size: 4rem;
+    }
+  }
+
+  & h3 {
+    text-align: center;
+    color: $white;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+  }
+}
+
+.about {
+  background-color: $grey;
+
+
+  &__heading {
+    h2 {
+      font-size: 4rem;
+      font-weight: 500;
+      color: $black;
+      margin-bottom: 2.4rem;
+
+      @media (max-width:991px) {
+        font-size: 3rem;
+      }
+    }
+
+    h3 {
+      font-size: 3rem;
+      font-weight: 300;
+
+      @media (max-width:991px) {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__desc {
+    p {
+      font-size: 1.8rem;
+      font-family: $baseFont;
+      line-height: 1.7;
+      color: #4C4C4C;
+
+      @media (max-width:767px) {
+        font-size: 1.6rem;
+
+      }
     }
   }
 }
