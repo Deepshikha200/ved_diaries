@@ -64,42 +64,17 @@
   }
 
   .insta_con {
-    overflow: hidden;
     width: 100%;
     background-color: #f9f9f9;
     margin-top: 5rem;
-  }
 
-  .instagram_flex {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
+    img {
+      max-width: 272px;
+      width: 100%;
 
-  }
-
-  .instagram_scroll {
-    display: flex;
-    animation: scroll 50s linear infinite;
-    cursor: pointer;
-  }
-
-  .instagram_scroll img {
-    max-width: 300px;
-    margin-right: 1rem;
-
-    @media (max-width: 575px) {
-      max-width: 200px;
-      
-    }
-  }
-
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-
-    to {
-      transform: translateX(-50%);
+      @media (max-width:767px) {
+        max-width: 200px;
+      }
     }
   }
 }

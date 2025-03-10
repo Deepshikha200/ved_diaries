@@ -5,29 +5,19 @@ import logo from "../../../assets/images/logo.png";
 import "./Header.scss";
 import { useEffect, useState } from "react";
 import { NavDropdown } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 
-const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+const Header = ({ headerClass }: any) => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = showOverlay ? "hidden" : "";
   }, [showOverlay]);
 
   return (
-    <header className={`header ${isScrolled ? "scroll_header" : ""}`}>
+    <header className={`header ${headerClass}`}>
       <div
         className={`overlay ${showOverlay ? "show" : ""}`}
         onClick={() => {
@@ -45,7 +35,9 @@ const Header = () => {
               <img src={logo} alt="" />
             </Navbar.Brand>
             <Nav className="ms-auto">
-              <Nav.Link className="nav-link">Home</Nav.Link>
+              <NavLink to="/" className="nav-link">
+                Home
+              </NavLink>
               <NavDropdown
                 title="Portfolio"
                 id="basic-nav-dropdown"
@@ -53,9 +45,11 @@ const Header = () => {
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
-                <NavDropdown.Item href="#action/3.1">Wedding</NavDropdown.Item>
+                <Link to="wedding" className="dropdown-item">
+                  Wedding
+                </Link>
                 <NavDropdown.Item href="#action/3.2">
-                Pre Wedding
+                  Pre Wedding
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">
                   Events and Parties

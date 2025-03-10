@@ -58,16 +58,6 @@
         font-size: 3rem;
       }
     }
-
-    h3 {
-      font-size: 3rem;
-      font-weight: 300;
-
-      @media (max-width:991px) {
-        font-size: 2rem;
-        margin-bottom: 3rem;
-      }
-    }
   }
 
   &__desc {

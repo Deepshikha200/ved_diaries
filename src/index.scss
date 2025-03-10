@@ -95,16 +95,19 @@ h2 {
   font-weight: 700;
 }
 
-.text-yellow {
-  color: #FFD013 !important;
+h3 {
+  font-size: 3rem;
+  font-weight: 300;
+
+  @media (max-width:991px) {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
 }
 
-.text-green {
-  color: #34F45F !important;
-}
-
-.text-red {
-  color: #FF6B6B !important;
+h2 {
+  font-size: 4rem;
+  font-weight: 400;
 }
 
 .cursor-pointer {
@@ -149,4 +152,9 @@ h2 {
   @media (max-width:767px) {
     padding: 3rem 0;
   }
+}
+
+
+.layout-outlet {
+  min-height: 100vh;
 }
