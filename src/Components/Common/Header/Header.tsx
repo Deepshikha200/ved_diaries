@@ -48,9 +48,10 @@ const Header = ({ headerClass }: any) => {
                 <Link to="wedding" className="dropdown-item">
                   Wedding
                 </Link>
-                <NavDropdown.Item href="#action/3.2">
+                <Link to="pre-wedding" className="dropdown-item">
                   Pre Wedding
-                </NavDropdown.Item>
+                </Link>
+
                 <NavDropdown.Item href="#action/3.3">
                   Events and Parties
                 </NavDropdown.Item>

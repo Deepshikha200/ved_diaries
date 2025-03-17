@@ -9,9 +9,9 @@ const Layout = () => {
   if (location.pathname === "/wedding") {
     headerClass = "wedding-header";
   } else if (location.pathname === "/pre-wedding") {
-    headerClass = "pre-wedding-header";
+    headerClass = "wedding-header";
   } else if (location.pathname === "/events") {
-    headerClass = "events-header";
+    headerClass = "wedding-header";
   }
 
   return (

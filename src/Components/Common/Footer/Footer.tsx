@@ -59,7 +59,7 @@ const Footer = () => {
             >
               <MdEmail size={18} className="mt-1" />
               <div className=" ms-3 text-dark">
-                <span className="phone">Email: lkumar7810@gmail.com</span>
+                <span className="phone">Email: veddiaries4@gmail.com</span>
               </div>
             </Link>
           </li>

@@ -11,26 +11,7 @@ import img18 from "../../../../assets/images/DSC09571.jpg";
 import img20 from "../../../../assets/images/DSC09795.jpg";
 
 const StartPage = () => {
-  const images = [
-    // img1,
-    // img2,
-    img18,
-    img4,
-    // img5,
-    img17,
-    // img8,
-    img9,
-    // img19,
-    // img3,
-    // img10,
-    // // img12,
-    // img13,
-    // img6,
-    // img14,
-    img15,
-    img20,
-    img16,
-  ];
+  const images = [img18, img4, img17, img9, img15, img20, img16];
 
   return (
     <>
