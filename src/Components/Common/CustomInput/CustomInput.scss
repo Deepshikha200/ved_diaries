@@ -1,0 +1,71 @@
+@use "../../../assets/theme/var" as *;
+
+
+
+.form-label,
+.form-check-label {
+  display: block;
+  color: $black;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 10px;
+
+  @media(max-width:1199px) {
+    font-size: 1.4rem;
+  }
+}
+
+.customInput {
+  margin-bottom: 2rem;
+  line-height: normal;
+  position: relative;
+
+  @media (max-width:767px) {
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 1.5rem;
+
+  }
+
+  .form-control {
+    background-color: #c0c0c0;
+    border-color: $grey;
+
+    // max-width: 52rem;
+    min-height: 6rem;
+    box-shadow: none;
+    color: $black;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    padding-left: 1.6rem;
+
+    &::placeholder {
+      color: $black;
+    }
+
+    @media (max-width:768px) {
+      max-width: 100%;
+      font-size: 1.4rem;
+      min-height: 5rem;
+
+
+    }
+  }
+
+  .eyeIcon {
+    position: absolute;
+    right: 7.5rem;
+    top: 5.8rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+  }
+}

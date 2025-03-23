@@ -1,16 +1,18 @@
 import { Col, Container, Row } from "react-bootstrap";
-import "../Wedding/Wedding.scss";
+import "../../Wedding/Wedding.scss";
 import { motion } from "framer-motion";
-import img6 from "../../../assets/images/DSC09536.jpg";
-import img7 from "../../../assets/images/pre_wed.jpg";
-import img8 from "../../../assets/images/DSC09948.jpg";
-import img10 from "../../../assets/images/DSC09571.jpg";
-import img1 from "../../../assets/images/DSC09765.jpg";
-import img2 from "../../../assets/images/pre_wed2.jpg";
-import img3 from "../../../assets/images/DSC09927.jpg";
-import img4 from "../../../assets/images/DSC09613.jpg";
-const PreWedding = () => {
-  const images = [img7, img10, img3, img1, img8, img2, img4, img6];
+import img6 from "../../../../assets/images/DSC02046.jpg";
+import img7 from "../../../../assets/images/DSC02042.jpg";
+import img10 from "../../../../assets/images/9E0A8569.jpg";
+import img1 from "../../../../assets/images/9E0A8498.jpg";
+import img2 from "../../../../assets/images/9E0A8485.jpg";
+import img3 from "../../../../assets/images/1J2A0503.jpg";
+import img4 from "../../../../assets/images/1J2A0505.jpg";
+import img8 from "../../../../assets/images/1J2A9887.jpg";
+import img9 from "../../../../assets/images/1J2A9816.jpg";
+import img11 from "../../../../assets/images/1J2A0505.jpg";
+const Events = () => {
+  const images = [img7, img3, img6, img2,img8, img9,img11, img10, img1, img4];
 
   return (
     <section className="wedding">
@@ -41,4 +43,4 @@ const PreWedding = () => {
   );
 };
 
-export default PreWedding;
+export default Events;

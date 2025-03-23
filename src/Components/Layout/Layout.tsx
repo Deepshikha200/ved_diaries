@@ -12,6 +12,8 @@ const Layout = () => {
     headerClass = "wedding-header";
   } else if (location.pathname === "/events") {
     headerClass = "wedding-header";
+  } else if (location.pathname === "/contact-us") {
+    headerClass = "wedding-header";
   }
 
   return (

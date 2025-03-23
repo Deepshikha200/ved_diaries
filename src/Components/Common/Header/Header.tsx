@@ -51,13 +51,14 @@ const Header = ({ headerClass }: any) => {
                 <Link to="pre-wedding" className="dropdown-item">
                   Pre Wedding
                 </Link>
-
-                <NavDropdown.Item href="#action/3.3">
+                <Link to="events" className="dropdown-item">
                   Events and Parties
-                </NavDropdown.Item>
+                </Link>
               </NavDropdown>
 
-              <Nav.Link className="nav-link">Contact Us</Nav.Link>
+              <NavLink className="nav-link" to="contact-us">
+                Contact Us
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
 

@@ -5,25 +5,17 @@ import img4 from "../../../../assets/images/9E0A8485.jpg";
 import img9 from "../../../../assets/images/9E0A0051.jpg";
 import img15 from "../../../../assets/images/_ATP8950.jpg";
 import insta from "../../../../assets/images/instagram.png";
-import img16 from "../../../../assets/images/DSC02046.jpg";
+// import img16 from "../../../../assets/images/DSC02046.jpg";
 import img17 from "../../../../assets/images/DSC09927.jpg";
 import img18 from "../../../../assets/images/DSC09571.jpg";
 import img20 from "../../../../assets/images/DSC09795.jpg";
 
 const StartPage = () => {
-  const images = [img18, img4, img17, img9, img15, img20, img16];
+  const images = [img18, img4, img17, img9, img15, img20];
 
   return (
     <>
-      <section className="start py-60">
-        <Container>
-          <div className="start_con">
-            <h3>Let’s Work Together</h3>
-            <p>Love what you see? Need more details?</p>
-            <button>Contact Us</button>
-          </div>
-        </Container>
-      </section>
+
       <section className="follow py-60">
         <>
           <h4>

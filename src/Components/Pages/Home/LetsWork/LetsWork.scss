@@ -1,0 +1,67 @@
+@use "../../../../assets/theme/var" as *;
+
+.start {
+  background-image: url("../../../../assets/images/contact_img.jpg");
+  background-size: cover;
+  background-position: bottom;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+
+  @media (max-width:767px) {
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      background-color: rgba($black, $alpha: 0.1);
+      backdrop-filter: blur(3px);
+      z-index: -1;
+    }
+  }
+
+  &_con {
+    color: $white;
+    margin-left: -10rem;
+
+    @media (max-width:991px) {
+      margin: 0;
+    }
+
+    & h3 {
+      text-transform: uppercase;
+      font-size: 4rem;
+      margin-bottom: 2rem;
+      font-weight: 500;
+
+      @media (max-width:767px) {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    & p {
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+
+    & button {
+      background-color: #9F9F9D;
+      color: $white;
+      padding: 1rem 3rem;
+      font-size: 1.8rem;
+      margin-top: 4rem;
+      border: 1.5px solid transparent;
+      transition: all ease-in-out 0.2s;
+
+      &:hover {
+        background-color: transparent;
+        transition: all ease-in-out 0.2s;
+        border: 1.5px solid #9F9F9D;
+      }
+    }
+  }
+}

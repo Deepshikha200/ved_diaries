@@ -1,54 +1,5 @@
 @use "../../../../assets/theme/var" as *;
 
-.start {
-  background-image: url("../../../../assets/images/contact_img.jpg");
-  background-size: cover;
-  background-position: bottom;
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-
-  &_con {
-    color: $white;
-    margin-left: -10rem;
-
-    @media (max-width:991px) {
-      margin: 0;
-    }
-
-    & h3 {
-      text-transform: uppercase;
-      font-size: 4rem;
-      margin-bottom: 2rem;
-
-      @media (max-width:767px) {
-        font-size: 3rem;
-        margin-bottom: 1.5rem;
-      }
-    }
-
-    & p {
-      font-size: 1.8rem;
-    }
-
-    & button {
-      background-color: #9F9F9D;
-      color: $white;
-      padding: 1rem 3rem;
-      font-size: 1.8rem;
-      margin-top: 4rem;
-      border: 1.5px solid transparent;
-      transition: all ease-in-out 0.2s;
-
-      &:hover {
-        background-color: transparent;
-        transition: all ease-in-out 0.2s;
-        border: 1.5px solid #9F9F9D;
-      }
-    }
-  }
-}
-
 .follow {
   h4 {
     a {
@@ -73,13 +24,23 @@
     background-color: #f9f9f9;
     margin-top: 5rem;
 
-    img {
-      max-width: 272px;
-      width: 100%;
+    .instagram_scroll {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
 
       @media (max-width:767px) {
-        max-width: 200px;
+        grid-template-columns: repeat(4, 1fr);
       }
+
+      @media (max-width:575px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    img {
+      max-width: 33rem;
+      width: 100%;
+      display: block;
     }
   }
 }

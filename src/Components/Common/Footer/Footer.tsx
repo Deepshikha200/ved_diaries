@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="pb-5 mb-lg-5  mb-0 footer">
       <Container>
         <div>
-          <ul className="footer_links d-flex align-items-center justify-content-center gap-5 ">
+          <ul className="footer_links d-flex align-items-center justify-content-center gap-lg-5 gap-4 ">
             <li>
               <Link to="/">HOME</Link>
             </li>
@@ -26,7 +26,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <ul className="list-unstyled d-flex mt-5 pt-lg-5 pt-0 justify-content-center gap-5 flex-wrap">
+        <ul className="list-unstyled d-flex mt-5 pt-lg-5 pt-0 justify-content-center gap-lg-5 gap-4 flex-wrap">
           <li className="mb-3">
             <Link
               to="tel:9877260236"

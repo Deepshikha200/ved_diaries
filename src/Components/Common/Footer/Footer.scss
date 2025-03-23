@@ -7,8 +7,12 @@
       a {
         color: $black11;
         font-size: 2rem;
+      white-space: nowrap;
+
+        @media (max-width:767px) {
+          font-size: 1.6rem;
+        }
       }
     }
-
   }
 }

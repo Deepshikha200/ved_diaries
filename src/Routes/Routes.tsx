@@ -3,6 +3,8 @@ import Home from "../Components/Pages/Home/Home";
 import Layout from "../Components/Layout/Layout";
 import Wedding from "../Components/Pages/Wedding/Wedding";
 import PreWedding from "../Components/Pages/PreWedding/PreWedding";
+import Events from "../Components/Pages/Home/Events/Events";
+import ContactUs from "../Components/Pages/ContactUs/ContactUs";
 
 const Routes = () => {
   const router = createBrowserRouter([
@@ -15,13 +17,21 @@ const Routes = () => {
           element: <Home />,
         },
         {
+          path: "/contact-us",
+          element: <ContactUs />,
+        },
+        {
           path: "/wedding",
           element: <Wedding />,
         },
         {
-          path:"/pre-wedding",
-          element:<PreWedding/>
-        }
+          path: "/pre-wedding",
+          element: <PreWedding />,
+        },
+        {
+          path: "/events",
+          element: <Events />,
+        },
       ],
     },
   ]);
