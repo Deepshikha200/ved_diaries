@@ -1,4 +1,3 @@
-import { Container } from "react-bootstrap";
 import "./StartPage.scss";
 import { Link } from "react-router-dom";
 import img4 from "../../../../assets/images/9E0A8485.jpg";

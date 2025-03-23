@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
 import "./LetsWork.scss";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 const LetsWork = () => {
   const navigate = useNavigate();
 
