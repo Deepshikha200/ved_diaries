@@ -1,11 +1,12 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../../../assets/images/logo.png";
-import "./Header.scss";
+// import logo from "../../../assets/images/logo.png";
+import logo from "../../../assets/images/Elephant-Decorated Logo for Ved Diaries.png"
 import { useEffect, useState } from "react";
 import { NavDropdown } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
+import "./Header.scss";
 
 const Header = ({ headerClass }: any) => {
   const [showOverlay, setShowOverlay] = useState(false);

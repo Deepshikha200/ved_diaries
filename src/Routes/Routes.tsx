@@ -1,10 +1,15 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "../Components/Pages/Home/Home";
+import { lazy, Suspense } from "react";
 import Layout from "../Components/Layout/Layout";
-import Wedding from "../Components/Pages/Wedding/Wedding";
-import PreWedding from "../Components/Pages/PreWedding/PreWedding";
-import Events from "../Components/Pages/Home/Events/Events";
-import ContactUs from "../Components/Pages/ContactUs/ContactUs";
+
+// Lazy-loaded components
+const Home = lazy(() => import("../Components/Pages/Home/Home"));
+const ContactUs = lazy(() => import("../Components/Pages/ContactUs/ContactUs"));
+const Wedding = lazy(() => import("../Components/Pages/Wedding/Wedding"));
+const PreWedding = lazy(
+  () => import("../Components/Pages/PreWedding/PreWedding")
+);
+const Events = lazy(() => import("../Components/Pages/Home/Events/Events"));
 
 const Routes = () => {
   const router = createBrowserRouter([
@@ -36,11 +41,7 @@ const Routes = () => {
     },
   ]);
 
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default Routes;
