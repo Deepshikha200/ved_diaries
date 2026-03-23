@@ -1,7 +1,6 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-// import logo from "../../../assets/images/logo.png";
 import logo from "../../../assets/images/Elephant-Decorated Logo for Ved Diaries.png"
 import { useEffect, useState } from "react";
 import { NavDropdown } from "react-bootstrap";
@@ -16,6 +15,12 @@ const Header = ({ headerClass }: any) => {
   useEffect(() => {
     document.body.style.overflow = showOverlay ? "hidden" : "";
   }, [showOverlay]);
+
+  const handleCloseNav = () => {
+    setShowOverlay(false);
+    setIsNavOpen(false);
+    setIsDropdownOpen(false);
+  }
 
   return (
     <header className={`header ${headerClass}`}>
@@ -35,8 +40,11 @@ const Header = ({ headerClass }: any) => {
             <Navbar.Brand className="d-lg-none d-block ">
               <img src={logo} alt="" />
             </Navbar.Brand>
-            <Nav className="ms-auto">
-              <NavLink to="/" className="nav-link">
+            <Nav className="ms-auto"
+            >
+              <NavLink to="/" className="nav-link"
+                onClick={handleCloseNav}
+              >
                 Home
               </NavLink>
               <NavDropdown
@@ -46,18 +54,18 @@ const Header = ({ headerClass }: any) => {
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
-                <Link to="wedding" className="dropdown-item">
+                <Link to="wedding" className="dropdown-item" onClick={handleCloseNav}>
                   Wedding
                 </Link>
-                <Link to="pre-wedding" className="dropdown-item">
+                <Link to="pre-wedding" className="dropdown-item" onClick={handleCloseNav}>
                   Pre Wedding
                 </Link>
-                <Link to="events" className="dropdown-item">
+                <Link to="events" className="dropdown-item" onClick={handleCloseNav}>
                   Events and Parties
                 </Link>
               </NavDropdown>
 
-              <NavLink className="nav-link" to="contact-us">
+              <NavLink className="nav-link" to="contact-us" onClick={handleCloseNav}>
                 Contact Us
               </NavLink>
             </Nav>

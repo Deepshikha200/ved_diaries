@@ -15,7 +15,7 @@ const StartPage = () => {
   return (
     <>
 
-      <section className="follow py-60">
+      <section className="follow">
         <>
           <h4>
             <Link to="https://www.instagram.com/ved.diaries/" target="_blank">
